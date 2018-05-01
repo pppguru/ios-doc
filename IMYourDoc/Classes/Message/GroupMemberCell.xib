@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemberCell" id="24S-Ph-TrH" customClass="GroupMemberCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="24S-Ph-TrH" id="fFQ-3j-vdm">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="59"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0e6-Wj-sOe">
+                        <rect key="frame" x="23" y="7" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="qks-iR-Uwe"/>
+                            <constraint firstAttribute="width" constant="45" id="tfO-aT-jM9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sam Nayer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FYw-S1-lo8" customClass="FontLabel">
+                        <rect key="frame" x="78" y="7" width="422" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEu-RL-Dkz">
+                        <rect key="frame" x="531" y="8" width="56" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="56" id="Gse-lk-uDc"/>
+                        </constraints>
+                        <state key="normal" image="Cross_btn_icon">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Admin)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Zem-qf-i6k" customClass="FontLabel">
+                        <rect key="frame" x="510" y="21" width="67" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="67" id="gA8-DI-OjO"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.61176470589999998" green="0.80392156859999997" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zem-qf-i6k" firstAttribute="leading" secondItem="FYw-S1-lo8" secondAttribute="trailing" id="4v9-Tg-ROr"/>
+                    <constraint firstItem="0e6-Wj-sOe" firstAttribute="centerY" secondItem="FYw-S1-lo8" secondAttribute="centerY" id="CZc-6P-gAs"/>
+                    <constraint firstItem="FYw-S1-lo8" firstAttribute="leading" secondItem="0e6-Wj-sOe" secondAttribute="trailing" constant="10" id="Jbu-Oq-lkM"/>
+                    <constraint firstItem="0e6-Wj-sOe" firstAttribute="height" secondItem="FYw-S1-lo8" secondAttribute="height" id="MT8-76-8qb"/>
+                    <constraint firstItem="Zem-qf-i6k" firstAttribute="centerY" secondItem="0e6-Wj-sOe" secondAttribute="centerY" id="Ptm-NE-Ulx"/>
+                    <constraint firstAttribute="centerY" secondItem="0e6-Wj-sOe" secondAttribute="centerY" id="S8Z-Q7-vag"/>
+                    <constraint firstItem="Zem-qf-i6k" firstAttribute="leading" secondItem="FYw-S1-lo8" secondAttribute="trailing" constant="10" id="VIo-uY-Zet"/>
+                    <constraint firstItem="0e6-Wj-sOe" firstAttribute="leading" secondItem="fFQ-3j-vdm" secondAttribute="leadingMargin" constant="15" id="bXe-Jp-qeh"/>
+                    <constraint firstItem="0e6-Wj-sOe" firstAttribute="width" secondItem="FYw-S1-lo8" secondAttribute="width" id="cgd-GS-Zcw"/>
+                    <constraint firstItem="VEu-RL-Dkz" firstAttribute="top" secondItem="fFQ-3j-vdm" secondAttribute="topMargin" id="iOT-J8-0Lv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VEu-RL-Dkz" secondAttribute="trailing" constant="5" id="ltD-Cu-23a"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Zem-qf-i6k" secondAttribute="trailing" constant="15" id="rPN-zB-8yZ"/>
+                    <constraint firstItem="VEu-RL-Dkz" firstAttribute="leading" secondItem="FYw-S1-lo8" secondAttribute="trailing" constant="10" id="t06-uA-7p3"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="VEu-RL-Dkz" secondAttribute="bottom" id="xqx-lO-d3O"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="cgd-GS-Zcw"/>
+                        <exclude reference="4v9-Tg-ROr"/>
+                        <exclude reference="t06-uA-7p3"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="adminL" destination="Zem-qf-i6k" id="MBx-eN-B42"/>
+                <outlet property="crossBtn" destination="VEu-RL-Dkz" id="uM5-RE-mX8"/>
+                <outlet property="userImg" destination="0e6-Wj-sOe" id="ngU-z0-sVl"/>
+                <outlet property="userNameL" destination="FYw-S1-lo8" id="HNn-af-uOG"/>
+            </connections>
+            <point key="canvasLocation" x="280" y="171"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Cross_btn_icon" width="15" height="15"/>
+    </resources>
+</document>

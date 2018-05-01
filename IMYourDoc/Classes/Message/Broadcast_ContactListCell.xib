@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ContactListCell" id="T4k-82-QZ1" customClass="Broadcast_ContactListCell">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T4k-82-QZ1" id="h6j-aH-1Oe">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName_icon" translatesAutoresizingMaskIntoConstraints="NO" id="tbL-ic-NPS">
+                        <rect key="frame" x="14" y="2" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="pab-R5-DOm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sam Nayer" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NqK-qt-8BV" customClass="FontLabel">
+                        <rect key="frame" x="78" y="7" width="461" height="55"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijj-Zd-8uw">
+                        <rect key="frame" x="547" y="8" width="45" height="48"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="Tjj-r3-8ch"/>
+                        </constraints>
+                        <state key="normal" image="bc_selected_icon_n">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="bc_selected_icon_h"/>
+                        <state key="highlighted" image="bc_selected_icon_h"/>
+                        <connections>
+                            <action selector="action_select:" destination="T4k-82-QZ1" eventType="touchUpInside" id="BFE-So-igG"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NqK-qt-8BV" firstAttribute="leading" secondItem="tbL-ic-NPS" secondAttribute="trailing" constant="4" id="8lu-N2-VPp"/>
+                    <constraint firstItem="Ijj-Zd-8uw" firstAttribute="top" secondItem="h6j-aH-1Oe" secondAttribute="topMargin" id="E5Y-B3-Ze1"/>
+                    <constraint firstItem="NqK-qt-8BV" firstAttribute="top" secondItem="h6j-aH-1Oe" secondAttribute="topMargin" constant="-1" id="FWW-me-ePi"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="tbL-ic-NPS" secondAttribute="bottom" constant="-6" id="Gcf-sY-ceX"/>
+                    <constraint firstItem="Ijj-Zd-8uw" firstAttribute="bottom" secondItem="h6j-aH-1Oe" secondAttribute="bottomMargin" id="SNQ-4C-2ab"/>
+                    <constraint firstItem="tbL-ic-NPS" firstAttribute="top" secondItem="h6j-aH-1Oe" secondAttribute="topMargin" constant="-6" id="XE1-ti-82W"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="NqK-qt-8BV" secondAttribute="bottom" constant="-6" id="XyT-it-xYQ"/>
+                    <constraint firstItem="Ijj-Zd-8uw" firstAttribute="leading" secondItem="NqK-qt-8BV" secondAttribute="trailing" constant="8" id="izP-4j-ery"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Ijj-Zd-8uw" secondAttribute="trailing" id="pDg-QI-Uqc"/>
+                    <constraint firstItem="tbL-ic-NPS" firstAttribute="leading" secondItem="h6j-aH-1Oe" secondAttribute="leadingMargin" constant="6" id="xPD-3U-JAt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btn_select" destination="Ijj-Zd-8uw" id="RhB-20-gyZ"/>
+                <outlet property="image_user" destination="tbL-ic-NPS" id="cX3-BA-cOp"/>
+                <outlet property="lbl_name" destination="NqK-qt-8BV" id="ExQ-4V-3me"/>
+            </connections>
+            <point key="canvasLocation" x="418" y="173.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UserName_icon" width="17" height="17"/>
+        <image name="bc_selected_icon_h" width="40" height="40"/>
+        <image name="bc_selected_icon_n" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Arial.ttf">
+            <string>ArialMT</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Sdw-kr-yU0" customClass="UserListCell">
+            <rect key="frame" x="0.0" y="0.0" width="461" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sdw-kr-yU0" id="9dB-lm-pgD">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="QUx-pm-Che" customClass="ImageViewAsincLoader">
+                        <rect key="frame" x="5" y="2" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="QUx-pm-Che" secondAttribute="height" multiplier="1:1" id="aHs-yN-R27"/>
+                            <constraint firstAttribute="width" constant="60" id="eOA-RD-g86"/>
+                        </constraints>
+                    </imageView>
+                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Role" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="jBk-oM-NDc" customClass="FontLabel">
+                        <rect key="frame" x="75" y="46" width="378" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="MCH-GO-R3u" customClass="FontLabel">
+                        <rect key="frame" x="75" y="2" width="378" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="OrV-5F-6nU"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="17"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="jBk-oM-NDc" firstAttribute="leading" secondItem="MCH-GO-R3u" secondAttribute="leading" id="6gu-fj-Ar8"/>
+                    <constraint firstItem="MCH-GO-R3u" firstAttribute="top" secondItem="9dB-lm-pgD" secondAttribute="topMargin" constant="-6" id="DW9-E9-CHS"/>
+                    <constraint firstItem="jBk-oM-NDc" firstAttribute="top" secondItem="MCH-GO-R3u" secondAttribute="bottom" constant="4" id="LJB-aY-nhG"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jBk-oM-NDc" secondAttribute="bottom" constant="-2" id="UYe-Je-gab"/>
+                    <constraint firstItem="MCH-GO-R3u" firstAttribute="leading" secondItem="QUx-pm-Che" secondAttribute="trailing" constant="10" id="YfB-Bd-rZ8"/>
+                    <constraint firstItem="jBk-oM-NDc" firstAttribute="trailing" secondItem="9dB-lm-pgD" secondAttribute="trailingMargin" id="bZy-M0-4nJ"/>
+                    <constraint firstItem="MCH-GO-R3u" firstAttribute="trailing" secondItem="9dB-lm-pgD" secondAttribute="trailingMargin" id="gUT-pg-fxC"/>
+                    <constraint firstItem="QUx-pm-Che" firstAttribute="leading" secondItem="9dB-lm-pgD" secondAttribute="leadingMargin" constant="-3" id="lrv-gQ-jTT"/>
+                    <constraint firstAttribute="centerY" secondItem="QUx-pm-Che" secondAttribute="centerY" id="qJ6-dM-E6K"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="roleLB" destination="jBk-oM-NDc" id="2yT-7t-lqi"/>
+                <outlet property="userIMGV" destination="QUx-pm-Che" id="1Lz-3v-ifN"/>
+                <outlet property="userNameLB" destination="MCH-GO-R3u" id="yIs-zo-lHk"/>
+            </connections>
+            <point key="canvasLocation" x="284.5" y="203.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Profile" width="119" height="119"/>
+    </resources>
+</document>
